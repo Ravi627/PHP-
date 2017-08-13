@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>admin login page</title>
+</head>
+<body>
+
+
+<form method="POST">
+	Username:<input type="text" name="user"><br>
+	Password:<input type="Password" name="pass">
+    
+    <input type="submit" onclick="check(this.form)" name="login">
+</form>
+
+<script language="javascript">
+	
+	function check(form)
+	{
+
+		if (form.user.value == "admin" && form.pass.value == "admin"){
+
+			window.open('admin.php')
+		}else{
+			alert("Incorrect Username or Password")
+			form.reset()
+		}
+
+
+	}	
+
+</script>
+
+</body>
+</html>
