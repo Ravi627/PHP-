@@ -15,13 +15,11 @@ Thank you
 <br>      Age: <? echo $_POST["Age"]?>
 <br>   Gender:<?echo $_POST["gender"] ?>
 
-<br>
-<b>Contact Information</b>
-  Address:<?echo $_POST["Address"] ?>
+  DOB: <?echo $_POST["BirthMonth"]  ?> <? echo $_POST["BirthDay"]?>  <? echo $_POST["BirthYear"]?>
 <br>MobileNo.:<?echo $_POST["MobileNo"] ?>
 <br>  Email:<?echo $_POST["Email"] ?>
+password :<?echo $_POST["Password"]?>
 </pre>
 
-</script>
 </body>
 </html>

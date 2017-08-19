@@ -19,15 +19,26 @@ if ($conn->connect_error) {
 } 
 
 $first_name = mysqli_real_escape_string($conn, $_POST['FirstName']);
+
 $last_name = mysqli_real_escape_string($conn, $_POST['LastName']);
-$age = mysqli_real_escape_string($conn, $_POST['Age']);
+
 $gender = mysqli_real_escape_string($conn, $_POST['gender']);
+
 $mobile_no = mysqli_real_escape_string($conn, $_POST['MobileNo']);
+
 $email_id = mysqli_real_escape_string($conn, $_POST['Email']);
 
+$password = mysqli_real_escape_string($conn, $_POST['Password']);
 
-$sql = "INSERT INTO list (firstname, lastname, age, gender, mobile_no, email)
-VALUES ('$first_name','$last_name','$age','$gender','$mobile_no','$email_id' )";
+
+$YYYY = mysqli_real_escape_string($conn, $_POST['BirthYear']);
+$MM = mysqli_real_escape_string($conn, $_POST['BirthMonth']);
+$DD = mysqli_real_escape_string($conn, $_POST['BirthDay']);
+
+$DOB = $YYYY .'-' .$MM .'-' .$DD ;
+
+$sql = "INSERT INTO list (FirstName, LastName, DateOfBirth, Gender, MobileNo, Email, password)
+VALUES ('$first_name','$last_name','$DOB','$gender','$mobile_no','$email_id','$password' )";
 
 if ($conn->query($sql) === TRUE) {
     $last_id = $conn->insert_id;
