@@ -1,9 +1,10 @@
+<?php include('check.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
 <title>Registration</title>
-    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="demo.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" media="all" />
 
 </head>
 <body>
@@ -11,7 +12,7 @@
 				<h1> Sign Up</h1>
             </header>       
       <div  class="form">
-    		<form  method="post" action="form_success.php" > 
+    		<form  method="post" action="form.php" > 
     			
           <p class="contact"><label > First Name</label></p> 
     			<input name="FirstName" type="text" required=""> 
@@ -20,19 +21,21 @@
           <input name="LastName" type="text" required=""> 
     			 
     			<p class="contact"><label for="email">Email</label></p> 
-    			<input id="email" name="Email" placeholder="example@domain.com" required="" type="email"> 
-    			 
+    			<input name="Email" placeholder="example@domain.com" required="" type="email"> 	 
                
           <p class="contact"><label for="password">Create a password</label></p> 
-    			<input type="password" id="password" name="Password" required=""> 
+    			<input type="password"  placeholder="･･･････"  name="Password_1" required=""> 
                
+          <p class="contact"><label for="password">Confirm password </label></p> 
+          <input type="password"  placeholder="･･･････"  name="Password_2" required="">      
                
+
                <fieldset>
                  <label>Birthday</label>
                   <label class="month"> 
                   <select class="select-style" name="BirthMonth">
                   <option value="">Month</option>
-                  <option  value="01">January</option>
+                  <option value="01">January</option>
                   <option value="02">February</option>
                   <option value="03" >March</option>
                   <option value="04">April</option>
@@ -57,8 +60,10 @@
             </select><br><br>
             
             <p class="contact"><label for="phone">Mobile phone</label></p> 
-            <input name="MobileNo" placeholder="phone number" required="" type="text"> <br>
-            <input class="button" type="submit" > 	 
+            <input name="MobileNo" placeholder="phone number" required="" type="text"> 
+            <br>
+            <pre> <input class="button" type="submit"  name="reg_user">                <font size="2"> Already a member? <a href="login.php">Sign in</a></font>
+            </pre>
    </form> 
 </div>      
 </div>

@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Details</title>
+     <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="demo.css" media="all" />
 </head>
 <body>
 
@@ -42,9 +44,9 @@ VALUES ('$first_name','$last_name','$DOB','$gender','$mobile_no','$email_id','$p
 
 if ($conn->query($sql) === TRUE) {
     $last_id = $conn->insert_id;
-    echo "Hello " .$first_name. ", your details have been added.<br>";
-     echo "your ID is " .$last_id ;
-     echo "<br>Thank you.";
+    echo "<h1><span>Hello " .$first_name. ", your details have been added.<br>";
+     echo "your ID is </span>" .$last_id. "</h1>";
+     
 
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error ;
@@ -53,19 +55,24 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 
 ?>
-<!--
-<pre>
- Your detials are
+<div class="form">
+ 
+ <h1><span>Your detials are</span></h1><br>
+ 
+     
+<p class="contact"><h2> Name : <?= $first_name ?>  <?= $last_name ?></h2></p>
+<p class="contact"><h2>Date of Birth : <?= $DOB ?> </h2></p>
+<p class="contact"><h2>Gender : <?= $gender ?></h2></p>
 
-     Name: $first_name $last_name
-     Age:  $age
-     Gender $gender
+<br><h1>Contact information</h1><br>
+<p class="contact"><h2>Email ID <?= $email_id ?></h2></p>
+<p class="contact"><h2> Mobile NO. :<?= $mobile_no ?></h2></p><br>
 
-
-echo "Contact Information" ;
-  
-	echo 'MobileNo.: '.$mobile_no. ;
-  	echo "Email: " .$email_id. ;
-</pre> -->
+     
+</div>
+<br>
+<br>
+<br>
+<center><h1>Thank you.</h1></center>
 </body>
 </html>
