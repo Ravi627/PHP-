@@ -10,24 +10,24 @@
 				<h1> Sign Up</h1>
             </header>       
       <div  class="form">
-    		<form  method="post" action="form_success.php"> 
+    		<form  method="post" action="form_success.php" id="reg_form" name="reg_form"> 
     			<p class="contact"><label > First Name</label></p> 
-    			<input name="FirstName" type="text" required=""> 
+    			<input name="FirstName" id="FirstName" type="text" required=""> 
 
           <p class="contact"><label for="name"> Last Name</label></p> 
-          <input name="LastName" type="text" required=""> 
+          <input name="LastName" id="LastName" type="text" required=""> 
     			 
     			<p class="contact"><label for="email">Email</label></p> 
-    			<input id="email" name="Email" placeholder="example@domain.com" required="" type="email"> 
+    			<input id="Email" name="Email" placeholder="example@domain.com" type="email"> 
     			 
                
           <p class="contact"><label for="password">Create a password</label></p> 
     			<input type="password" id="password" name="Password" required=""> 
-                
+
           <p class="contact"><label for="repassword">Confirm your password</label></p> 
     			<input type="password" id="repassword" name="RePassword" required=""> 
         
-               
+              
                <fieldset>
                  <label>Birthday</label>
                   <label class="month"> 
@@ -58,7 +58,7 @@
             </select><br><br>
             
             <p class="contact"><label for="phone">Mobile phone</label></p> 
-            <input name="phone" placeholder="phone number" required="" type="text"> <br>
+            <input name="phone" id="phone" placeholder="phone number" required="" type="text"> <br>
             <input class="button" type="submit" > 	 
    </form> 
 </div>      
