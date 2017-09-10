@@ -8,13 +8,12 @@
 
 </head>
 <body>
-<header>
+<header><?php include('errors.php'); ?> 
 				<h1> Sign Up</h1>
-            </header>       
+            </header>  
+                
       <div  class="form">
     		<form  method="post" action="login.php" > 
-
-          <?php include('errors.php'); ?>
 
     		<p class="contact"><label for="email">Email</label></p> 
     			<input name="Email" placeholder="example@domain.com" required="" type="text">

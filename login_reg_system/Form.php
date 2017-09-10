@@ -8,9 +8,11 @@
 
 </head>
 <body>
-			<header>
+			<header><?php include('errors.php'); ?>   
+          
 				<h1> Sign Up</h1>
-            </header>       
+            </header>    
+              
       <div  class="form">
     		<form  method="post" action="form.php" > 
     			
@@ -65,6 +67,7 @@
             <pre> <input class="button" type="submit"  name="reg_user">                <font size="2"> Already a member? <a href="login.php">Sign in</a></font>
             </pre>
    </form> 
+
 </div>      
 </div>
 </body>

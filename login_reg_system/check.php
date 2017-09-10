@@ -4,6 +4,7 @@ $servername = "localhost";
 $username = "root";
 $password = "9913";
 $dbname = "mydb";
+$errors = array();
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -88,6 +89,9 @@ if(isset($_POST['login_user'])){
 						$_SESSION['username'] = $useremail;
 						$_SESSION['success'] = "You are now logged in";
 						header('location: index.php');
+				}else {
+
+					array_push($errors, "Wrong username/password combination");
 				}
 		}
 

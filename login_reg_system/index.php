@@ -16,13 +16,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Registration</title>
+<title>Home</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
     <link rel="stylesheet" type="text/css" href="css/demo.css" media="all" />
 
 </head>
 <body>
-<header>
+	<div class="header">
+		<h2>Home Page</h2>
+	</div>
+	<div class="content">
 
 		<!-- notification message -->
 		<?php if (isset($_SESSION['success'])) : ?>
